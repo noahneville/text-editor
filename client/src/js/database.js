@@ -12,7 +12,9 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
+/* this stores items in the database. First we establish what the database is, jateDb, then we
+ authorize read/write transactions. Then we store whatever content was in the put request.  
+*/
 export const putDb = async (content) => {
   const jateDb = await openDB('jate', 1)
   const tx = jateDb.transaction('jate', 'readwrite')
@@ -21,7 +23,8 @@ export const putDb = async (content) => {
   const result = await request;
 };
 
-// TODO: Add logic for a method that gets all the content from the database
+// retrieves data from the database. 
+// Basically the same as the put request, but its a readonly transaction and it's a get request instead of a put.
 export const getDb = async () => {
   const jateDb = await openDB('jate', 1)
   const tx = jateDb.transaction('jate', 'readonly')
@@ -29,8 +32,8 @@ export const getDb = async () => {
   const request = store.get(1)
   const result = await request;
   result
-    ? console.log('data retrieved')
-    : console.log('no data found in database')
+    ? console.log('Data successfully fetched from database!')
+    : console.log('no data found in database :(')
   return result?.value;
 };
 
