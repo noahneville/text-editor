@@ -12,7 +12,7 @@ The simplest way to use this application is by viewing it deployed live on the w
 
 To download the webapp for offline use, you can either hit the "Install!" button in the top left of the nav bar, or you can click the install icon in the URL bar. Both are circled in red in the screenshot of the webapp pictured below: 
 
-![screenshot highlight installation methods for PWA](assets%5Cimg%5Cdeployed-screenshot.PNG)
+![screenshot highlight installation methods for PWA](./assets/img/deployed-screenshot.PNG)
 
 ## License
 
